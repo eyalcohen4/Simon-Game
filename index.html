@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Jquery Simon</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <script data-main="js/main.js" src="js/lib/require.min.js"> </script>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-12 header">
+            <h1 class="page-header"> Simon Game </h1>
+            <p> It's quite simple. Just Follow the sequences and click on the colors </p>
+        </div>
+    </div>
+
+    <div class="row game">
+        <div class="game-board">
+            <div class="simon">
+                <ul>
+                    <li class="tile red" data-tile="1"></li>
+                    <li class="tile green" data-tile="2"></li>
+                    <li class="tile yellow" data-tile="3"></li>
+                    <li class="tile blue" data-tile="4"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="game-info">
+                <h2>Round: <span data-round="0">0</span></h2>
+                <button class="btn btn-success" data-action="start" >Start</button>
+                <p class="lose" data-action="lose"> <span data-round="0"></span> Rounds its not bad! Try Again. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

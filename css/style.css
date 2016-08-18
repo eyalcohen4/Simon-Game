@@ -1,0 +1,100 @@
+body {
+    background:white;
+}
+.container {
+    color:grey;
+    font-family:'Open Sans', sans-serif;
+}
+
+.header {
+    text-align:center;
+}
+
+.game-info {
+    margin:0 auto;
+    text-align:center;
+}
+/* General Simon */
+
+.simon {
+    margin:0 auto;
+    width: 302px;
+    height: 295px;
+    -webkit-border-radius: 150px 150px 150px 150px;
+    border-radius: 150px 150px 150px 150px;
+    /*-moz-box-shadow: 2px 1px 12px #aaa;*/
+    /*-webkit-box-shadow: 2px 1px 12px #aaa;*/
+    /*-o-box-shadow: 2px 1px 12px #aaa;*/
+    /*box-shadow: 2px 1px 12px #aaa;*/
+}
+
+/* Tiles section */
+
+ul {
+    list-style: none;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.active {
+    opacity: 1 !important;
+}
+
+.tile {
+    opacity: 0.7;
+    -webkit-transition: opacity 250ms ease;
+    -moz-transition: opacity 250ms ease;
+    -ms-transition: opacity 250ms ease;
+    -o-transition: opacity 250ms ease;
+    transition: opacity 250ms ease;
+}
+
+.red, .blue, .yellow, .green {
+    height: 295px;
+    -webkit-border-radius: 150px 150px 150px 150px;
+    border-radius: 150px 150px 150px 150px;
+    position: absolute;
+    text-indent: 10000px;
+}
+
+.tile.lit {
+    opacity: 1;
+}
+
+
+.red:hover, .blue:hover, .yellow:hover, .green:hover {
+    border: 2px solid black;
+
+}
+
+.red {
+    background: #ff1800;
+    clip: rect(0px, 302px, 150px, 150px);
+    width: 300px;
+}
+
+.blue {
+    background: #1200ff;
+    clip: rect(0px, 150px, 150px, 0px);
+    width: 300px;
+}
+
+.yellow {
+    background: #e7fe00;
+    clip: rect(150px, 150px, 300px, 0px);
+    width: 300px;
+}
+
+.green {
+    background: #00de09;
+    clip: rect(150px,302px, 300px, 150px);
+    width: 300px;
+}
+
+.lose {
+    font-size:18px;
+    color:black;
+}
