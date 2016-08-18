@@ -7,6 +7,7 @@ define(['jquery'], function($) {
         round: 0,
         active: true,
         mode: 'normal',
+        scores:0,
 
         init: function() {
             var that = this;
@@ -64,7 +65,14 @@ define(['jquery'], function($) {
         endGame: function() {
             // notify the user that they lost and change the "round" text to zero
             $('p[data-action=lose]').show();
-            $($('[data-round]').get(0)).text('0');
+           $($('[data-round]').get(0)).text('0');
+
+        },
+
+        setScoreToLeaderboard: function() {
+            var that = this;
+
+
         },
 
         changeMode: function(e) {
@@ -136,7 +144,6 @@ define(['jquery'], function($) {
         playSound: function(tile) {
             if (this.mode !== 'light-only') {
                 var audio = $('<audio autoplay></audio>');
-                audio.append('<source src="sounds/' + tile + '.ogg" type="audio/ogg" />');
                 audio.append('<source src="sounds/' + tile + '.mp3" type="audio/mp3" />');
                 $('[data-action=sound]').html(audio);
             }
